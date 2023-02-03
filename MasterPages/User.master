@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>variables | user</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"/>
+        <style>
+        .cardimg{
+            transition-duration: 0.5s;
+            transition-timing-function: linear;        }
+        .cardimg:hover{
+             transform: scale(1.1,1.1)
+
+        }
+        @keyframes scaleAnim {
+                0%   { 
+                    transition-duration: 0.5s;
+                    transition-timing-function: linear;  }
+                100% {             
+                    transform: scale(1.1,1.1)
+                }
+        }
+         @keyframes scaleAnim2 {
+                0%   { 
+                    transition-timing-function: linear;
+                    transform: scale(0.5,0.5)
+
+                }
+                100% {             
+                    transform: scale(2,2)
+                }
+        }
+         @keyframes alphaAnim1 {
+                0%   { 
+                    transition-duration: 0.5s;
+                    transition-timing-function: linear;
+                    opacity:0.5;
+                }
+                50%{
+                                        opacity:1;
+
+                }
+               
+                100% {    
+                    transform: scale(1.5,1.5)
+                }
+        }
+        .scaleAnimClass{
+              animation: 3s infinite alternate scaleAnim;
+
+        }
+        .alphaAnimClass{
+              animation: 2s infinite alternate alphaAnim1;
+
+        }
+         .scaleAnimClass2{
+              animation: 2s ease-in-out infinite alternate scaleAnim;
+
+        }
+    </style>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="overflow-x:hidden">
+    <form id="form1" runat="server">
+      
+             <div class=" mt-0 w-100 shadow-lg  sticky-top bg-light" style="z-index:4000" >
+        <nav class="navbar navbar-expand-lg d-flex justify-content-between" style="font-family: 'Quicksand', sans-serif;"  >
+  <div class="container-fluid " style="height:5vh">
+    <a class="navbar-brand" href="UserHome.aspx">
+        <img src="../variablesImages/variablesDarkLogo.png" style="height:7vh" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse position-absolute end-0" id="navbarSupportedContent">
+    <ul class="navbar-nav end-0 me-auto">
+        
+          <li class="nav-item d-flex p-2 justify-content-center mx-4">
+               <asp:TextBox ID="searchBox" placeholder="search" class="form-control col-4" runat="server" 
+              Visible="True"></asp:TextBox>
+                
+                   <asp:Button ID="search" class="btn btn-primary btn-sm" runat="server" Text="search" 
+                      OnClick="search_Click" />
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link active" aria-current="page" href="UserAccountPage.aspx"><img src="../variablesImages/icons/robot.png" style="height:5vh" /></a>
+        </li>
+         <li class="nav-item mx-3 mt-2 text-dark">
+               <a runat="server" href="../WebPages/UserCartPage.aspx" ID="mycart" class="position-relative">
+    <img src="../variablesImages/icons/userwishlist.png" style="height:5vh" />
+  <span ID="ProductCountlbl" runat="server" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    99+
+  </span>
+</a>
+             </li>
+        
+         <li class="nav-item mx-3 d-flex justify-content-center">
+             <button type="button" class="btn border border-0 "  data-bs-toggle="modal" data-bs-target="#exampleModal" style="height:5vh">
+                 <img src="../variablesImages/icons/customer.png" style="height:5vh" />
+                 
+</button>
+        </li>
+        </ul>
+    </div>
+    
+      
+
+  </div>
+            
+</nav>
+        </div>
+
+                     <div class=" mt-0 w-100 shadow-lg  sticky-top bg-light" style="z-index:4000" >
+        <nav class="navbar navbar-expand-lg d-flex justify-content-between" style="font-family: 'Quicksand', sans-serif;"  >
+  <div class="container-fluid mt-4" style="height:5vh">
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent2">
+    <ul class="navbar-nav d-flex justify-content-between">
+        
+        <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="AllProductsPage.aspx">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/selectNormal.png" style="height:5vh" />
+                  <p class=" ">ALL Products</p>
+              </div>
+          </a>
+        </li>
+       
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BindCategoryPage.aspx?catname=Smartphones">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/smartphone.png" style="height:5vh" />
+                  <p class="">SmartPhones</p>
+              </div>
+          </a>
+        </li>
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BindCategoryPage.aspx?catname=TV&AV">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/smart-tv.png" style="height:5vh" />
+                  <p class="">TV&AV</p>
+              </div>
+          </a>
+        </li>
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BindCategoryPage.aspx?catname=Laptop">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/laptop.png" style="height:5vh" />
+                  <p class="">Laptops</p>
+              </div>
+          </a>
+        </li>
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BindCategoryPage.aspx?catname=Speakers">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/atmos.png" style="height:5vh" />
+                  <p class="">Speakers</p>
+              </div>
+          </a>
+        </li>
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BindCategoryPage.aspx?catname=Tablets">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/tab.png" style="height:5vh" />
+                  <p class="">Tablets</p>
+              </div>
+          </a>
+        </li>
+
+       
+          <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BindCategoryPage.aspx?catname=Smartwatches">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/smartwatchs.png" style="height:5vh" />
+                  <p class="">SmartWatches</p>
+              </div>
+          </a>
+        </li>
+         
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BindCategoryPage.aspx?catname=Earphones">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/buds.png" style="height:5vh" />
+                  <p class="">EarPhones</p>
+              </div>
+          </a>
+        </li>
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BindCategoryPage.aspx?catname=Accesories">
+              <div class="m-auto text-center">
+                  <img src="../variablesImages/icons/cable.png" style="height:5vh" />
+                  <p class="">Accessories</p>
+              </div>
+          </a>
+        </li>
+        </ul>
+    </div>
+    
+      
+
+  </div>
+            
+</nav>
+        </div>
+          <!-- Modal -->
+        <div id="popupwindow" runat="server" class="sticky-top" style="z-index:50000;font-family: 'Quicksand', sans-serif;">
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Variables says</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to logout from variables ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-lg" data-bs-dismiss="modal">no way!</button>
+        <button type="button" class="btn btn-primary">
+
+            <asp:Button ID="logoutBtn" OnClick="logoutBtn_Click" CssClass="btn text-light" runat="server" Text="Logout" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+                 
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                <div class="shadow-lg sticky-top" style="z-index:4000;">
+         <footer class="footer mt-auto py-3 bg-light" style="font-family: 'Quicksand', sans-serif;">
+  <div class="container">
+   <p class="col-md-3  mb-0 ">© 2022 Variables.Pvt.Lmt Company, Inc by Harsh Khavale</p>
+
+    <ul class="navbar-nav my-4 d-flex justify-content-between end-0 me-auto">
+        
+          <li class="nav-item mx-3 d-flex align-items-center">
+          <a class="nav-link active" aria-current="page" href="UserAccountPage.aspx"><img src="../variablesImages/icons/instagram.png" style="height:4vh" /></a>
+                 <p class="col-md-3  mx-4 link-primary mb-0 ">@variables_pvt_lmt</p>
+
+        </li>
+         <li class="nav-item mx-3 d-flex align-items-center">
+          <a class="nav-link active " aria-current="page" href="UserAccountPage.aspx"><img src="../variablesImages/icons/whatsapp.png" style="height:4vh" /></a>
+                              <p class="col-md-3 mx-4 link-primary  mb-0 ">7412564896</p>
+
+        </li> 
+         <li class="nav-item mx-3 d-flex align-items-center">
+          <a class="nav-link active" aria-current="page" href="UserAccountPage.aspx"><img src="../variablesImages/icons/facebook.png" style="height:4vh" /></a>
+                              <p class="col-md-3  mx-4 link-primary  mb-0 ">@variables_pvt_lmt_11</p>
+
+        </li>
+        </ul>
+
+   
+  </div>
+            
+</footer>
+            </div>
+
+    </form>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="MasterPages_Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>variables | admin</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"/>
+    <style>
+        .text{
+            font-size:2vh;
+        }
+        .text:hover{
+            transform:scale(1.1,1.1);
+            color:dodgerblue
+
+
+        }
+
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                 <div class=" mt-0 w-100 shadow-lg  sticky-top bg-light" style="z-index:4000" >
+        <nav class="navbar navbar-expand-lg d-flex justify-content-between" style="font-family: 'Quicksand', sans-serif;"  >
+  <div class="container-fluid " style="height:7vh">
+    <a class="navbar-brand" href="DefaultPage.aspx">
+        <img src="../variablesImages/variablesDarklogo.png" style="height:7vh" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex justify-content-between mt-4">
+        
+        <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="SignInPage.aspx">
+                <p class="text">UserData</p>
+             
+          </a>
+        </li>
+        
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="SignInPage.aspx">
+                  <p class="text">Deliveries</p>
+          </a>
+        </li>
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="BrandsPage.aspx">
+              
+                  <p class="text">Brands</p>
+            
+          </a>
+        </li>
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="CategoriesPage.aspx">
+                <p class="text">Categories</p>
+            
+          </a>
+        </li>
+         <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="SubCategoryPage.aspx">
+               <p class="text">Sub-Categories</p>
+              
+          </a>
+        </li>
+                <li class="nav-item mx-4 d-flex justify-content-center">
+          <a class="nav-link active " aria-current="page" href="AddProductPage.aspx">
+               <p class="text">Products</p>
+              
+          </a>
+        </li>
+        </ul>
+
+    <ul class="navbar-nav text position-absolute end-0 ">
+        
+        
+         <li class="nav-item mx-2 d-flex justify-content-center">
+          <a class="nav-link active text-center mt-3 btn btn-outline-light" aria-current="page" href="SignInPage.aspx"><img src="../variablesImages/icons/customer.png" style="height:3vh" /><p class="text-center">Logout</p></a>
+        </li>
+        </ul>
+    </div>
+    
+      
+
+  </div>
+            
+</nav>
+        </div>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    </form>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>
