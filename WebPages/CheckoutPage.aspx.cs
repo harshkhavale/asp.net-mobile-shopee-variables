@@ -53,8 +53,8 @@ public partial class WebPages_CheckoutPage : System.Web.UI.Page
         input.Add("currency", "INR");
         input.Add("receipt", "12121");
         input.Add("payment_capture", 1);
-        string key = "rzp_test_wkK5IeZltzEvCA";
-        string secret = "yUkQtSkrWkvXRjYWlUFVYxY2";
+        string key = "RAZOR_PAY_KEY";
+        string secret = "RAZOR_PAY_SECRET_KEY";
 
         RazorpayClient client = new RazorpayClient(key, secret);
 
@@ -178,7 +178,7 @@ public partial class WebPages_CheckoutPage : System.Web.UI.Page
         // email send process -
         String ToEmailAddress = Email;
         String Username = UserName;
-        MailMessage PassRecMail = new MailMessage("variables.pvt.lmt@gmail.com", ToEmailAddress);
+        MailMessage PassRecMail = new MailMessage("WEBSITE_EMAIL", ToEmailAddress);
         PassRecMail.Body = EmailBody;
         PassRecMail.IsBodyHtml = true;
         PassRecMail.Subject = "Order Approved!";
@@ -187,7 +187,7 @@ public partial class WebPages_CheckoutPage : System.Web.UI.Page
         {
             client.EnableSsl = true;
             client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential("variables.pvt.lmt@gmail.com", "fmzrswkdeymytrpr");
+            client.Credentials = new NetworkCredential("WEBSITE_EMAIL", "APP_KEY");
             client.Host = "smtp.gmail.com";
             client.Port = 587;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
