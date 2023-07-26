@@ -1,3 +1,4 @@
+![screencapture-localhost-62255-WebPages-AddProductPage-aspx-2023-07-26-19_26_43](https://github.com/harshkhavale/asp.net-mobile-shopee-variables/assets/91471322/d0c864b0-89ec-48ae-9cee-394691adec4a)
 # VariablesElectronicsShoppingWebsite
 ![variablesAdd](https://user-images.githubusercontent.com/91471322/216743873-73ba93b9-00ac-4524-b8c1-404f8a072f9b.png)
 <h3>
@@ -28,4 +29,6 @@ mainly works in 3 Master Pages Default, User & Admin masterpages
 ![Screenshot 2023-02-04 200911](https://user-images.githubusercontent.com/91471322/216773966-b7253aa0-d18b-45f3-acc7-b228e76a3608.png)
 ![Screenshot 2023-02-04 202625](https://user-images.githubusercontent.com/91471322/216774238-dbfcc316-f389-411f-aab2-db6707c237d0.png)
 ![Screenshot 2023-02-04 202652](https://user-images.githubusercontent.com/91471322/216774242-f72ea5bd-a6dc-4076-8f52-72ee361dec10.png)
-![Screenshot 2023-02-04 203429](https://user-images.githubusercontent.com/91471322/216774548-a9f52af7-9051-4efc-8c40-ff565d7b3ab7.png)
+<h1>Admin panel</h1>
+![Uploading screencapture-localhost-62255-WebPages-AdminHome-aspx-2023-07-26-18_51_04.png…]()
+![Uploading screencapture-localhost-62255-WebPages-SubCategoryPage-aspx-2023-07-26-19_26_28.png…]()
