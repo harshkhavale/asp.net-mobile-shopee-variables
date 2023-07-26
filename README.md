@@ -29,9 +29,8 @@ mainly works in 3 Master Pages Default, User & Admin masterpages
 ![Screenshot 2023-02-04 200911](https://user-images.githubusercontent.com/91471322/216773966-b7253aa0-d18b-45f3-acc7-b228e76a3608.png)
 ![Screenshot 2023-02-04 202625](https://user-images.githubusercontent.com/91471322/216774238-dbfcc316-f389-411f-aab2-db6707c237d0.png)
 ![Screenshot 2023-02-04 202652](https://user-images.githubusercontent.com/91471322/216774242-f72ea5bd-a6dc-4076-8f52-72ee361dec10.png)
-<h1>Admin panel</h1>
-![screencapture-localhost-62255-WebPages-AdminHome-aspx-2023-07-26-18_51_04](https://github.com/harshkhavale/asp.net-mobile-shopee-variables/assets/91471322/3841848a-84ea-46df-8405-bbb987ac718e).
-![screencapture-localhost-62255-WebPages-SubCategoryPage-aspx-2023-07-26-19_26_28](https://github.com/harshkhavale/asp.net-mobile-shopee-variables/assets/91471322/512f14f5-458f-43ed-b504-590b2f026327).
+![screencapture-localhost-62255-WebPages-AdminHome-aspx-2023-07-26-18_51_04](https://github.com/harshkhavale/asp.net-mobile-shopee-variables/assets/91471322/3841848a-84ea-46df-8405-bbb987ac718e)
+![screencapture-localhost-62255-WebPages-SubCategoryPage-aspx-2023-07-26-19_26_28](https://github.com/harshkhavale/asp.net-mobile-shopee-variables/assets/91471322/512f14f5-458f-43ed-b504-590b2f026327)
 ![screencapture-localhost-62255-WebPages-AddProductPage-aspx-2023-07-26-19_26_43](https://github.com/harshkhavale/asp.net-mobile-shopee-variables/assets/91471322/ef0e2c07-9d81-42ff-9d3e-77ec32c558c9)
 
 
